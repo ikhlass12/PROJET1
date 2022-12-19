@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/index2-3.css'%}"  />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+        <div class="logo">
+          <img src="{% static 'images/thermometer.png'%}" width="30px" />
+          <p><a href="{% url 'data'%}">.ThermoTemp</p>
+        </div>
+        <ul>
+          <li><a href="{% url 'data'%}">Acceuil</a></li>
+          <li><a href="{% url 'data2'%}">Température </a></li>
+          <li><a href="{% url 'data3'%}">Graphe</a></li>
+          <li><a href="{% url 'historique'%}">Historique</a></li>
+        </ul>
+        <span>2022©EL HORMI Ikhlas</span>
+      </div>
+      <div class="stats-container">
+        <div class="table-container">
+          <h1 style="margin-bottom: 10px">Données Collectées :</h1>
+          <table>
+            <tr>
+              <th class="n">N</th>
+              <th class="temp">Tempérture</th>
+              <th class="date">Date:Heure</th>
+            </tr>
+              <tbody>
+              {% for i in jr1 %}
+              <tr>
+              <td>{{i.id}}</td>
+              <td>{{i.temp}}</td>
+              <td>{{i.dt}}</td>
+              {%endfor%}
+              </tbody>
+          </table>
+          <span class="titre"><img src="{% static 'images/thermometer.png'%}" width="30px" /><a href="{% url 'Gjour1'%}"> Graphe </a></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
