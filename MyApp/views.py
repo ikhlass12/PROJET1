@@ -41,4 +41,7 @@ def Gjour3(request):
 def historique(request):
     return render(request, 'historique.html')
 
+def historique1(request):
+    pass
+
 
