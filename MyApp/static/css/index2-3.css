@@ -103,17 +103,22 @@ th {
 a {
   text-decoration: none;
   color: white;
+  text-align :center;
 }
 .liste a {
   text-decoration: none;
   color: black;
   align-items: center;
   justify-content: center;
+  font-family: cursive;
+
+  
   }
 .titre a {
    font-size:x-large;
   text-align:center;
   color: black;
+  text-align :center;
 }
 .titre {
     padding:30%;
@@ -121,6 +126,14 @@ a {
     text-align:center;
     align-items: center;
     justify-content: center;
+}
+.tempact{
+    text-align: center;
+    color: #20B9D8;
+    font-weight: 600;
+    font-style: oblique;
+    font-variant: small-caps;
+    font-size: x-large;
 }
 
 

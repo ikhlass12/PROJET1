@@ -20,7 +20,7 @@
       <div class="menu">
         <div class="logo">
           <img src="{% static 'images/tt.png'%}" width="30px" />
-          <p><a href="{% url 'data'%}">.ThermoTemp</p>
+          <p><a href="{% url 'data'%}"><h2>.ThermoTemp</h2></p>
         </div>
         <ul>
           <li><a href="{% url 'data'%}">Acceuil</a></li>
@@ -34,12 +34,9 @@
         <div class="table-container">
           <h1 style="margin-bottom: 10px">Historique :</h1>
               <ul class="liste">
-          <li><img src="{% static 'images/tt.png'%}" width="30px" /><a href="{% url 'jour1'%}">Données collectées durant le premier jour </a></li>
-          <li><img src="{% static 'images/tt.png'%}" width="30px" /><a href="{% url 'Gjour1'%}">Graphe du premier jour </a></li>
-          <li><img src="{% static 'images/tt.png'%}" width="30px" /><a href="{% url 'jour2'%}">Données collectées durant le deuxiéme jour </a></li>
-          <li><img src="{% static 'images/tt.png'%}" width="30px" /><a href="{% url 'Gjour2'%}">Graphe du premier jour </a></li>
-           <li><img src="{% static 'images/tt.png'%}" width="30px" /><a href="{% url 'jour3'%}">Données collectées durant le troisiéme jour </a></li>
-          <li><img src="{% static 'images/tt.png'%}" width="30px" /><a href="{% url 'Gjour3'%}">Graphe du le troisiéme jour </a></li>
+          <li><a href="{% url 'Gjour1'%}"><img src="{% static 'images/ikhlas.png'%}" width="200px" /></img> </a></li>
+          <li><a href="{% url 'Gjour2'%}"><img src="{% static 'images/ikhlas.png'%}" width="200px" /></img> </a></li
+
         </ul>
         </div>
       </div>
