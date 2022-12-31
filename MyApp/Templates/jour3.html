@@ -24,7 +24,7 @@
         </div>
         <ul>
          <li><a href="{% url 'data'%}">Acceuil</a></li>
-          <li><a href="{% url 'data2'%}">Température </a></li>
+          <li><a href="{% url 'data2'%}">Données collectées </a></li>
           <li><a href="{% url 'data3'%}">Graphe</a></li>
           <li><a href="{% url 'historique'%}">Historique</a></li>
         </ul>
@@ -32,6 +32,7 @@
       </div>
       <div class="stats-container">
         <div class="table-container">
+           <span class="titre"><img src="{% static 'images/graphe.png'%}" width="30px" /><a href="{% url 'Gjour3'%}">Graphe </a></span>
           <h1 style="margin-bottom: 10px">Données Collectées :</h1>
           <table>
             <tr>
@@ -48,7 +49,6 @@
               {%endfor%}
               </tbody>
           </table>
-          <span class="titre"><img src="{% static 'images/tt.png'%}" width="30px" /><a href="{% url 'Gjour3'%}">Graphe </a></span>
         </div>
       </div>
     </div>

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/index2-3.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/index2-3.css'%}"  />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,53 +24,20 @@
         </div>
         <ul>
           <li><a href="{% url 'data'%}">Acceuil</a></li>
-          <li><a href="{% url 'data2'%}">Données collectées </a></li>
+          <li><a href="{% url 'data2'%}">Données collectées</a></li>
           <li><a href="{% url 'data3'%}">Graphe</a></li>
           <li><a href="{% url 'historique'%}">Historique</a></li>
         </ul>
         <span>2022©EL HORMI Ikhlas</span>
       </div>
       <div class="stats-container">
-        <div class="graph-container">
-          <h1 style="margin-bottom: 10px">Graphe :</h1>
-          <div class="card-body">
-<canvas id="myAreaChart" width="100%" height="50"></canvas>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-</div>
+        <div class="table-container">
+          <h1 style="margin-bottom: 10px">Historique :</h1>
+              <ul class="liste">
+          <li><img src="{% static 'images/icon.png'%}" width="60px" /></img><a href="{% url 'jour2'%}">2 derniers jours </a></li>
+          <li><img src="{% static 'images/icon.png'%}" width="70px" /></img><a href="{% url 'jour3'%}">3 derniers jours </a></li>
 
-<script>
-const dates = [{% for i in jr3 %} '{{i.dt}}', {% endfor %}];
-const datas = [{% for i in jr3 %} '{{i.temp}}', {% endfor %}];
-var ctx = document.getElementById('myAreaChart').getContext('2d');
-var myChart = new Chart(ctx, {
-type: 'line',
-data: {
-labels: dates,
-scaleShowLabels : false,
-datasets: [{
-label: 'Temperature',
-data:datas,
-backgroundColor: [
-'rgb(34, 96,162, 0.3)'
-],
-
-borderColor: [
-' #D8AD2B',
-],
-borderWidth:  2
-}]
-},
-options: {
-scales: {
-yAxes: [{
-ticks: {
-beginAtZero: true
-}
-}]
-}
-}
-});
-</script>
+        </ul>
         </div>
       </div>
     </div>

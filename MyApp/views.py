@@ -14,32 +14,34 @@ def dht113(request):
     s = {'tab': tab}
     return render(request, 'index3.html', s)
 def jour1(request):
-    jr1 = Dht.objects.all()[:12]
+    jr1 = Dht.objects.all()[0:72]
     s1 = {'jr1': jr1}
     return render(request, 'jour1.html', s1)
 def jour2(request):
-    jr2 = Dht.objects.all()[:5]
+    jr2 = Dht.objects.all()[72:144]
     s2 = {'jr2': jr2}
     return render(request, 'jour2.html', s2)
 def jour3(request):
-    jr3= Dht.objects.all()[:3]
+    jr3= Dht.objects.all()[144:216]
     s3 = {'jr3': jr3}
     return render(request, 'jour3.html', s3)
 def Gjour1(request):
-    jr1= Dht.objects.all()[:3]
+    jr1= Dht.objects.all()[0:72]
     s1 = {'jr1': jr1}
     return render(request, 'Gjour1.html', s1)
 def Gjour2(request):
-    jr2= Dht.objects.all()[:3]
+    jr2= Dht.objects.all()[72:144]
     s2 = {'jr2': jr2}
     return render(request, 'Gjour2.html', s2)
 def Gjour3(request):
-    jr3= Dht.objects.all()[:3]
+    jr3= Dht.objects.all()[144:216]
     print("jre 3 :", jr3)
     s3 = {'jr3': jr3}
     return render(request, 'Gjour3.html', s3)
 def historique(request):
     return render(request, 'historique.html')
+def hist(request):
+    return render(request, 'hist.html')
 
 
 

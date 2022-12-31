@@ -15,5 +15,6 @@ urlpatterns = [
  path('Gjour2/', views.Gjour2, name='Gjour2'),
  path('Gjour3/', views.Gjour3, name='Gjour3'),
  path('historique/', views.historique, name='historique'),
+ path('hist/', views.hist, name='hist'),
 ]
 

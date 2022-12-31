@@ -2,16 +2,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto Condensed", sans-serif;
 }
-
 .container {
   display: flex;
   align-items: center;
   height: 100vh;
-
 }
-
 .logo {
   display: flex;
   align-items: center;
@@ -46,7 +42,7 @@ li {
 
 
 span {
-  color: white;
+  color: black ;
   font-size: 15px;
 }
 
@@ -57,12 +53,19 @@ span {
   display: flex;
   flex-direction: column;
   margin-left: auto;
+
 }
   justify-content: space-around;
 }
 
 .table-container {
   height: 50%;
+  display:flex;
+  align-items:center;
+}
+.table-cont{
+  height: 50%;
+  display:flex;
 }
 
 table {
@@ -105,15 +108,19 @@ a {
   color: white;
   text-align :center;
 }
+c {
+  text-decoration: none;
+  color: white;
+  text-align :center;
+}
 .liste a {
   text-decoration: none;
   color: black;
   align-items: center;
   justify-content: center;
   font-family: cursive;
-
-  
   }
+
 .titre a {
    font-size:x-large;
   text-align:center;
@@ -135,5 +142,21 @@ a {
     font-variant: small-caps;
     font-size: x-large;
 }
-
-
+.liste{
+display:flex;
+justify-content:center;
+vertical-align:top;
+align-items: center;
+height:100%;
+weight:100%;
+}
+.button
+{
+padding: 10px 30px;
+background: blue;
+color: white;
+align-items:center;
+}
+.button:hover
+{
+background: grey ;
